@@ -5,18 +5,26 @@ class Game
     play2.downcase!
     case
     when play1 == 'rock' && play2 == 'scissors'
-      return "Rock wins!"
+      winner = "Player 1"
+      play = play1
     when play1 == 'scissors' && play2 == 'rock'
-      return "Rock wins!"
+      winner = "Player 2"
+      play = play2
     when play1 == 'rock' && play2 == 'paper'
-      return "Paper wins!"
+      winner = "Player 2"
+      play = play2
     when play1 == 'paper' && play2 == 'rock'
-      return "Paper wins!"
+      winner = "Player 1"
+      play = play1
     when play1 == 'paper' && play2 == 'scissors'
-      return "Scissors wins!"
+      winner = "Player 2"
+      play = play2
     when play1 == 'scissors' && play2 == 'paper'
-      return "Scissors wins!"
+      winner = "Player 1"
+      play = play1
     end
+
+    return "#{winner} wins by playing #{play.capitalize}!"
 
   end
 
