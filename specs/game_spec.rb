@@ -4,6 +4,10 @@ require_relative('../models/game.rb')
 
 class TestGame < MiniTest::Test
 
+  def test_draw
+    assert_equal("It's a draw!", Game.play('rock', 'rock'))
+  end
+
   def test_rock_scissors
     assert_equal("Player 1 wins by playing Rock!", Game.play('rock', 'scissors'))
   end

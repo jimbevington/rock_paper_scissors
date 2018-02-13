@@ -6,6 +6,10 @@ class Game
     play1.downcase!
     play2.downcase!
 
+    if play1 == play2
+      return "It's a draw!"
+    end
+
     plays = ['rock', 'paper', 'scissors']
     result = plays.index(play1) - plays.index(play2)
     if result == 1 || result == -2
